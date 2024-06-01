@@ -2,11 +2,17 @@
 
 Das Repository enthält ein LaTeX-Template, das im Ergebnis den aktuellen formalen Anforderungen der IU entspricht. Das LaTeX-Dokument selbst erhebt dabei keinen Anspruch auf Vollständigkeit oder Korrektheit.
 
-Das finale Demo-Dokument findet sich [hier](https://github.com/aspnetde/iu-latex-template/raw/main/template/final.pdf).
+Ich empfehle für die Arbeit mit dem Dokument https://www.overleaf.com/ zu verwenden.
 
 # Hinweise zur Verwendung
 
-1. Arbeit schreiben (`example.tex`) und PDF erzeugen.
-2. Deckblatt (`cover.docx`) anpassen und PDF erzeugen.
-3. Das Cover-PDF als erste Seite dem PDF der Arbeit hinzufügen.
-4. Fertig.
+## Vorbereitung:
+1. Neues Projekt mit `Upload Project` in Overleaf erstellen
+2. Einstellungen für das Dokument setzen: `content/settings.tex`.
+
+## Arbeit erstellen
+- Abkürzungsverzeichnis erstellen: `content/acronyms.tex`.
+- Abstract schreiben: `content/abstract.tex`.
+- Texte schreiben: `content/texts.tex`.
+
+Vielen Dank an Thomas Bandt https://github.com/aspnetde/iu-latex-template/ für die Vorarbeit.

@@ -1,0 +1,65 @@
+\usepackage[a4paper, margin={2cm, 2cm}]{geometry}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{parskip} %Remove skip on beginning of paragraph
+\usepackage[ngerman]{babel}
+\usepackage{titling}
+
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{12}\selectfont}
+\subsectionfont{\fontsize{12}{12}\selectfont}
+\subsubsectionfont{\fontsize{12}{12}\selectfont}
+\renewcommand{\footnotesize}{\linespread{1}\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\source}[1]{\caption*{\footnotesize Quelle: {#1}} }
+\newcommand{\tablesource}[1]{\vspace{10pt} \caption*{\footnotesize Quelle: {#1}} }
+
+
+\usepackage{caption}
+\captionsetup[listing]{position=top}
+
+\usepackage{helvet} %Substitute for Arial
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[printonlyused,withpage]{acronym}
+
+\linespread{1.5}
+
+\renewenvironment{quote}{%
+  \list{}{%
+    \leftmargin1.27cm   % this is the adjusting screw
+    \rightmargin\leftmargin
+  }
+  \item\relax
+}
+{\endlist}
+
+\usepackage[
+  backend=biber
+ ,style=apa
+ ,sortlocale=de
+ ,sorting=nyvt
+ ,sortcites=false
+ ,block=none
+ ,url=true
+ ,urldate=comp
+ ,minnames=1
+ ,maxnames=2
+]{biblatex}
+\addbibresource{content/bibliography.bib}
+\DeclareLanguageMapping{german}{german-apa} 
+\DefineBibliographyStrings{ngerman}{
+  urlfrom   = {verfügbar unter},
+  retrieved = {letzter Zugriff am},
+  from      = {von:}
+}
+
+\DeclareCiteCommand{\secondaryciteauthor}{}{\printtext[bibhyperref]{\printnames{labelname}}}{}{}
+\DeclareCiteCommand{\secondaryciteyear}{}{\bibhyperref{\printdate}}{\multicitedelim}{}
+\newcommand{\secondarycitedirect}[3]{\secondaryciteauthor{#1} (\secondaryciteyear{#1}, zitiert nach \secondaryciteauthor{#2}, \secondaryciteyear{#2})}
+\newcommand{\secondaryciteindirect}[3]{(\secondaryciteauthor{#1}, \secondaryciteyear{#1}, zitiert nach \secondaryciteauthor{#2}, \secondaryciteyear{#2})}
+\newcommand{\secondarycitedirectpage}[3]{\secondaryciteauthor{#1} (\secondaryciteyear{#1}, zitiert nach \secondaryciteauthor{#2}, \secondaryciteyear{#2}, S. #3)}
+\newcommand{\secondaryciteindirectpage}[3]{(\secondaryciteauthor{#1}, \secondaryciteyear{#1}, zitiert nach \secondaryciteauthor{#2}, \secondaryciteyear{#2}, S. #3)}
+
+\graphicspath{{images/}}
+
+\def\quoteSic{[\textit{sic}]}
