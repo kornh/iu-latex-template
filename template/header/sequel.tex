@@ -1,17 +1,5 @@
-
-\pagenumbering{Roman}
-
-\addcontentsline{toc}{section}{\listfigurename}
-\listoffigures
-\pagebreak
-
-\cleardoublepage
-\section*{Abkürzungsverzeichnis}
-\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
-\begin{acronym}
-\import{./content}{acronyms.tex}
-\end{acronym}
-\pagebreak
-
-
 \printbibliography[title=Literaturverzeichnis, heading=bibintoc]
+\pagebreak
+
+\appendix
+\import{../content}{appendix.tex}
